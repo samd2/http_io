@@ -40,15 +40,15 @@ set ZLIB_SOURCE=!BOOST_ROOT!\zlib-src
 
 REM Customizations
 echo "BOOST_BRANCH is"
-echo %BOOST_BRANCH%
+echo !BOOST_BRANCH!
 echo "BOOST_BRANCH quoted is"
-echo "%BOOST_BRANCH%"
+echo "!BOOST_BRANCH!"
 cd
 pushd !BOOST_ROOT!\libs
-git clone https://github.com/CPPAlliance/buffers -b develop --depth 1
+git clone https://github.com/CPPAlliance/buffers -b !BOOST_BRANCH! --depth 1
 popd
 pushd !BOOST_ROOT!\libs
-git clone https://github.com/CPPAlliance/http_proto -b develop --depth 1
+git clone https://github.com/CPPAlliance/http_proto -b !BOOST_BRANCH! --depth 1
 popd
 
 echo '==================================> COMPILE'
