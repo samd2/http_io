@@ -39,6 +39,10 @@ git clone --branch v1.2.13 https://github.com/madler/zlib.git !BOOST_ROOT!\zlib-
 set ZLIB_SOURCE=!BOOST_ROOT!\zlib-src
 
 REM Customizations
+echo "BOOST_BRANCH is"
+echo %BOOST_BRANCH%
+echo "BOOST_BRANCH quoted is"
+echo "%BOOST_BRANCH%"
 cd
 pushd !BOOST_ROOT!\libs
 git clone https://github.com/CPPAlliance/buffers -b develop --depth 1
